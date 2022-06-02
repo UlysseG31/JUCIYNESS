@@ -14,5 +14,6 @@ public class PortalManager : MonoBehaviour
     void InvokeEnemy()
     {
         Instantiate(EnemyPrefab, transform.position, transform.rotation);
+        
     }
 }

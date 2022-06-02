@@ -7,6 +7,7 @@ public class EnemyController : MonoBehaviour
     public float Health;
     public float MaxSpeed;
     public float AccelerationRate;
+    public ParticleSystem Boom;
 
     // Private Variables
     float Speed;
@@ -40,6 +41,8 @@ public class EnemyController : MonoBehaviour
         //Die
         if(Health <= 0)
         {
+            StartCoroutine(CreateBoom());
+
             Destroy(gameObject);
         }
 
@@ -81,4 +84,12 @@ public class EnemyController : MonoBehaviour
         }
         DriftFactor = 1;
     }
+
+    IEnumerator CreateBoom()
+    {
+        ParticleSystem bommDestroy = Instantiate(Boom, transform.position, transform.rotation);
+        yield return new WaitForSeconds(1);
+        Destroy(bommDestroy);
+    }
 }
+
