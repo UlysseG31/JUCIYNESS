@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccad3c413d2e5ea46b359e499d0ba258, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 2
+  Health: 1
   MaxSpeed: 500
   AccelerationRate: 1
   Boom: {fileID: 6987315883184678815, guid: 00353b758d530074d95d69c8886a3ca4, type: 3}

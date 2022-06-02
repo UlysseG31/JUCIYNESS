@@ -1,13 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using EZCameraShake;
 
 public class EnemyController : MonoBehaviour
 {
+
+
     public float Health;
     public float MaxSpeed;
     public float AccelerationRate;
     public ParticleSystem Boom;
+    //public Camera_Shake cameraShake;
 
     // Private Variables
     float Speed;
@@ -42,7 +46,8 @@ public class EnemyController : MonoBehaviour
         if(Health <= 0)
         {
             StartCoroutine(CreateBoom());
-
+            CameraShaker.Instance.ShakeOnce(2.5f, 2.5f, .1f, 1f);
+            //StartCoroutine(cameraShake.Shake(.15f, .4f));
             Destroy(gameObject);
         }
 
