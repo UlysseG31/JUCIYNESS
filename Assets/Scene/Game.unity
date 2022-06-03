@@ -373,6 +373,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6051496217127232739, guid: 54355dacce05c084ebd36000dd6069d4, type: 3}
   m_PrefabInstance: {fileID: 755063498}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &217158695 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4166763544959258747, guid: 901506c11712dbc42a0885676fe718b5, type: 3}
+  m_PrefabInstance: {fileID: 7696167159711966960}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &220037265
 GameObject:
   m_ObjectHideFlags: 0
@@ -35746,7 +35751,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1859623371
 RectTransform:
   m_ObjectHideFlags: 0
@@ -35754,17 +35759,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1859623370}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.08353927, w: 0.9965045}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 220037269}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 9.584}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -1019, y: 561}
+  m_SizeDelta: {x: 532.4586, y: 212.7291}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1859623372
 MonoBehaviour:
@@ -35788,18 +35793,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: b1abf076f56c7674b9b82cd236c7807d, type: 3}
-    m_FontSize: 14
+    m_FontSize: 78
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
+    m_MinSize: 2
+    m_MaxSize: 78
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: COMBO
+  m_Text: SCORE
 --- !u!222 &1859623373
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -36100,10 +36105,22 @@ PrefabInstance:
       propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[1].value
       value: 0.43801117
       objectReference: {fileID: 0}
+    - target: {fileID: 4166763544959258747, guid: 901506c11712dbc42a0885676fe718b5, type: 3}
+      propertyPath: m_Pitch
+      value: 1.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 4166763544959258747, guid: 901506c11712dbc42a0885676fe718b5, type: 3}
+      propertyPath: m_Volume
+      value: 0.034
+      objectReference: {fileID: 0}
     - target: {fileID: 7696167157940194099, guid: 901506c11712dbc42a0885676fe718b5, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7696167157940194100, guid: 901506c11712dbc42a0885676fe718b5, type: 3}
+      propertyPath: jump
+      value: 
+      objectReference: {fileID: 217158695}
     - target: {fileID: 7696167157940194100, guid: 901506c11712dbc42a0885676fe718b5, type: 3}
       propertyPath: camAnim
       value: 

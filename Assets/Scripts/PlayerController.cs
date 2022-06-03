@@ -37,6 +37,7 @@ public class PlayerController : MonoBehaviour
     BoxCollider2D col; // Change It If You Use Something Else That Box Collider, Make Sure You Update The Reference In Start Function
 
     [SerializeField] private AudioSource jump;
+    [SerializeField] private AudioSource dash;
     ////// START & UPDATE :
 
     void Start()
@@ -74,8 +75,8 @@ public class PlayerController : MonoBehaviour
             {
                 if (!AirDash && !InTheGround())
                     return;
-
-
+                dash.Play();
+                
                 StartCoroutine(Dash());
             }
         }
