@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D rb;
     BoxCollider2D col; // Change It If You Use Something Else That Box Collider, Make Sure You Update The Reference In Start Function
 
-
+    [SerializeField] private AudioSource jump;
     ////// START & UPDATE :
 
     void Start()
@@ -126,12 +126,13 @@ public class PlayerController : MonoBehaviour
         if (InTheGround())
         {
             rb.velocity = Vector2.up * JumpPower;
+            jump.Play();
         }
         else
         {
             if (currentJumps >= AirJumps)
                 return;
-
+            jump.Play();
             currentJumps ++;
             rb.velocity = Vector2.up * JumpPower;
         }

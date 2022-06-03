@@ -6,6 +6,7 @@ public class BulletController : MonoBehaviour
 {
     public float Damage;
     public float Speed;
+    [SerializeField] private AudioSource shoot;
 
     // Private Variables
     Rigidbody2D rb;

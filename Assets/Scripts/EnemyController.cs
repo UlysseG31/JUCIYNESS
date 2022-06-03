@@ -6,11 +6,13 @@ using EZCameraShake;
 public class EnemyController : MonoBehaviour
 {
 
-
+    [SerializeField] private SimpleFlash flashEffect;
+    [SerializeField] private KeyCode flashKey;
     public float Health;
     public float MaxSpeed;
     public float AccelerationRate;
     public ParticleSystem Boom;
+    [SerializeField] private AudioSource hit;
     //public Camera_Shake cameraShake;
 
     // Private Variables
@@ -61,6 +63,9 @@ public class EnemyController : MonoBehaviour
     public void GetDamage(float dmg)
     {
         Health -= dmg;
+        flashEffect.Flash();
+        CameraShaker.Instance.ShakeOnce(1.5f, 1.5f, .1f, 1f);
+        hit.Play();
     }
 
     void RotateTowardsPlayer()
