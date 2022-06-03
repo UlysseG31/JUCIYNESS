@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using EZCameraShake;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class EnemyController : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class EnemyController : MonoBehaviour
     public ParticleSystem Boom;
     [SerializeField] private AudioSource hit;
     //public Camera_Shake cameraShake;
+
+    private ScoreManager scoremanager;
 
     // Private Variables
     float Speed;
@@ -29,6 +32,8 @@ public class EnemyController : MonoBehaviour
         col = GetComponent<BoxCollider2D>();
         Player = GameObject.FindWithTag("Player");
         DriftFactor = 1;
+        
+        scoremanager = FindObjectOfType<ScoreManager>();
     }
 
     void Update()
@@ -47,8 +52,9 @@ public class EnemyController : MonoBehaviour
         //Die
         if(Health <= 0)
         {
+            scoremanager.AddScore();
             StartCoroutine(CreateBoom());
-            CameraShaker.Instance.ShakeOnce(2.5f, 2.5f, .1f, 1f);
+            CameraShaker.Instance.ShakeOnce(2.3f, 2.3f, .1f, 1f);
             //StartCoroutine(cameraShake.Shake(.15f, .4f));
             Destroy(gameObject);
         }
@@ -64,7 +70,7 @@ public class EnemyController : MonoBehaviour
     {
         Health -= dmg;
         flashEffect.Flash();
-        CameraShaker.Instance.ShakeOnce(1.5f, 1.5f, .1f, 1f);
+        CameraShaker.Instance.ShakeOnce(1.2f, 1.2f, .1f, 1f);
         hit.Play();
     }
 

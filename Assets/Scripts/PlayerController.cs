@@ -38,6 +38,8 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private AudioSource jump;
     [SerializeField] private AudioSource dash;
+
+    public Animator squashAnimator;
     ////// START & UPDATE :
 
     void Start()
@@ -66,6 +68,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Jump();
+            squashAnimator.SetTrigger("jump");
         }
 
         // Dashing
@@ -73,6 +76,7 @@ public class PlayerController : MonoBehaviour
         {
             if (MoveDirection != 0 && canDash)
             {
+                squashAnimator.SetTrigger("dash");
                 if (!AirDash && !InTheGround())
                     return;
                 dash.Play();

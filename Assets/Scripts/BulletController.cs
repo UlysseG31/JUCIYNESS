@@ -6,6 +6,7 @@ public class BulletController : MonoBehaviour
 {
     public float Damage;
     public float Speed;
+    public ParticleSystem Bam;
     [SerializeField] private AudioSource shoot;
 
     // Private Variables
@@ -34,6 +35,7 @@ public class BulletController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
+        StartCoroutine(CreateBam());
         if (collision.CompareTag("Ground"))
         {
             Destroy(gameObject);
@@ -43,5 +45,12 @@ public class BulletController : MonoBehaviour
             collision.gameObject.GetComponent<EnemyController>().GetDamage(Damage);
             Destroy(gameObject);
         }
+    }
+
+    IEnumerator CreateBam()
+    {
+        ParticleSystem bamDestroy = Instantiate(Bam, transform.position, transform.rotation);
+        yield return new WaitForSeconds(1);
+        Destroy(bamDestroy);
     }
 }
