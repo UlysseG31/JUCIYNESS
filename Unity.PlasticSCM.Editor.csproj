@@ -251,10 +251,10 @@
      <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.15.1\Editor\PlasticSCM\Views\PendingChanges\PendingChangesMultiColumnHeader.cs" />
      <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.15.1\Editor\PlasticSCM\AssetsUtils\Processor\PlasticAssetsProcessor.cs" />
      <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.15.1\Editor\PlasticSCM\Views\CreateWorkspace\DrawCreateWorkspaceView.cs" />
-     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.15.1\Editor\PlasticSCM\Views\Changesets\ChangesetsListHeaderState.cs" />
      <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.15.1\Editor\PlasticSCM\DrawGuiModeSwitcher.cs" />
      <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.15.1\Editor\PlasticSCM\Gluon\UpdateReport\UpdateReportListView.cs" />
      <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.15.1\Editor\PlasticSCM\CheckWorkspaceTreeNodeStatus.cs" />
+     <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.15.1\Editor\PlasticSCM\Views\Changesets\ChangesetsListHeaderState.cs" />
      <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.15.1\Editor\PlasticSCM\Tool\LaunchTool.cs" />
      <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.15.1\Editor\PlasticSCM\AssetsUtils\Processor\AssetsProcessor.cs" />
      <Compile Include="Library\PackageCache\com.unity.collab-proxy@1.15.1\Editor\PlasticSCM\ViewSwitcher.cs" />

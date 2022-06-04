@@ -54,7 +54,7 @@ public class EnemyController : MonoBehaviour
         {
             scoremanager.AddScore();
             StartCoroutine(CreateBoom());
-            CameraShaker.Instance.ShakeOnce(2.3f, 2.3f, .1f, 1f);
+            CameraShaker.Instance.ShakeOnce(1.2f, 1.2f, .1f, 1f);
             //StartCoroutine(cameraShake.Shake(.15f, .4f));
             Destroy(gameObject);
         }
@@ -70,7 +70,7 @@ public class EnemyController : MonoBehaviour
     {
         Health -= dmg;
         flashEffect.Flash();
-        CameraShaker.Instance.ShakeOnce(1.2f, 1.2f, .1f, 1f);
+        CameraShaker.Instance.ShakeOnce(0.6f, 0.6f, .1f, 1f);
         hit.Play();
     }
 
